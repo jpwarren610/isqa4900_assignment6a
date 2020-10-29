@@ -14,8 +14,8 @@ class Cook(models.Model):
     pit_temp = models.IntegerField(blank=False, null=False)
     cook_time = models.IntegerField(blank=False, null=False)
     final_temp = models.IntegerField(blank=False, null=False)
-    judge_score = models.IntegerField(blank=False, null=False)
-    notes = models.TextField(max_length=360)
+    judge_score = models.DecimalField(max_digits=None, decimal_places=None)
+    notes = models.TextField(max_length=360, blank=True, null=True)
 
     created_date = models.DateTimeField(
         default=timezone.now)

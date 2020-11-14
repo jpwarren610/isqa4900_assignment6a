@@ -14,7 +14,7 @@ class Cook(models.Model):
     pit = models.CharField(max_length=100)
     fuel = models.CharField(max_length=100)
     pit_temp = models.IntegerField(blank=False, null=False)
-    cook_time = models.IntegerField(blank=False, null=False)
+    cook_time = models.DecimalField(max_digits=3, decimal_places=1)
     final_temp = models.IntegerField(blank=False, null=False)
     personal_score = models.DecimalField(max_digits=2, decimal_places=1)
     judge_score = models.DecimalField(max_digits=2, decimal_places=1)

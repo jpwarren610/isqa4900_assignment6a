@@ -7,14 +7,18 @@ class Cook(models.Model):
     event_location = models.CharField(max_length=100)
     year = models.IntegerField(blank=False, null=False)
     meat = models.CharField(max_length=100)
+    weight = models.DecimalField(max_digits=None, decimal_places=None)
     injection = models.CharField(max_length=100)
     rub = models.CharField(max_length=100)
+    mop_sauce = models.CharField(max_length=100)
     pit = models.CharField(max_length=100)
     fuel = models.CharField(max_length=100)
     pit_temp = models.IntegerField(blank=False, null=False)
     cook_time = models.IntegerField(blank=False, null=False)
     final_temp = models.IntegerField(blank=False, null=False)
+    personal_score = models.DecimalField(max_digits=None, decimal_places=None)
     judge_score = models.DecimalField(max_digits=None, decimal_places=None)
+    award = models.CharField(max_length=100)
     notes = models.TextField(max_length=360, blank=True, null=True)
 
     created_date = models.DateTimeField(
